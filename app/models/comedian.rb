@@ -8,4 +8,5 @@ class Comedian < ActiveRecord::Base
   def specials_count
     self.specials.count
   end
+
 end

@@ -9,10 +9,11 @@ describe Comedian do
         expect(Comedian.average_age).to eq(33.33)
       end
     end
+    
     describe "Instance Methods" do
       describe "#specials_count" do
         it "returns the comedian's number of specials" do
-          
+
         end
       end
     end
