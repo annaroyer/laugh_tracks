@@ -10,6 +10,17 @@ describe "As a user" do
       expect(page).to have_content('funny guy')
       expect(page).to have_content(20)
     end
+
+    it "I can see each a list of all comedian specials" do
+      Comedian.create(name: 'funny guy', age: 20)
+      Special.create(name: 'laugh a lot', comedian_id: 1)
+      Special.create(name: 'laugh a lot', comedian_id: 1)
+      Special.create(name: 'laugh a lot', comedian_id: 1)
+
+      visit '/comedians'
+
+      expect(page).to have_content('laugh a lot')
+    end
   end
 end
 

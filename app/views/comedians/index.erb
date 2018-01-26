@@ -1,8 +1,9 @@
+<a href="/">Home</a>
 <h1>Comedians</h1>
 <h4>Average age of all comedians: <%= Comedian.average_age %> years old</h4>
 
 <% @comedians.each do |comedian| %>
-  <h2><%= comedian.name %>(<%= comedian.age %>)</h2>
+  <a href="/comedians/<%= comedian.id %>"><h2><%= comedian.name %>(<%= comedian.age %>)</h2></a>
   <h4><%= comedian.specials_count %> Specials:</h4>
   <ul><% comedian.specials.each do |special| %>
     <li><%= special.name %></li>

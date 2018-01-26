@@ -1,0 +1,5 @@
+<h1><%= @comedian.name %>(<%= @comedian.age %>)</h1>
+<h4><%= @comedian.specials_count %> Specials:</h4>
+<ul><% @comedian.specials.each do |special| %>
+  <li><%= special.name %></li>
+<% end %></ul>
